@@ -7,12 +7,12 @@
     <div class="row justify-content-md-center">
         <div class="jumbotron col-6">
             <h1>Bem vindo ao sistema Biblioteca</h1>
-            <form asp-action="Login" method="POST">
+            <form asp-action="Login" method="POST"  asp-action="Login">
                 <div class="form-group">
-                    <input type="text" placeholder="Login" class="form-control" name="login" />
+                    <input type="text" placeholder="Login" class="form-control" name="login" asp-for="login"/>
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Senha" class="form-control" name="senha"/>
+                    <input type="password" placeholder="Senha" class="form-control" name="senha" asp-for="senha"/>
                 </div>
                 <input type="submit" class="btn btn-primary btn-lg" value="Entrar" />
             </form>
