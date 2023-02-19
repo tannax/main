@@ -31,6 +31,7 @@ namespace Biblioteca.Controllers
             return View();
         }
 
+
         [HttpPost]
         public IActionResult Login(string login, string senha)
         {
@@ -45,6 +46,28 @@ namespace Biblioteca.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+  [HttpPost]
+        public IActionResult LLogin(Login u)
+        {
+            Login userFound = LoginBD.inserirLogin(u);
+           if(u != null) {
+            HttpContext.Session.SetInt32("id", userFound.id);
+        HttpContext.Session.SetString("login", userFound.login);
+        HttpContext.Session.SetString("senha", userFound.senha);
+            return View ();
+
+            /* o que tinha do outro projeto:
+            return View("Cadastros");
+            }
+            else
+           {
+            ViewBag.Nota = "Falha no login!";
+        return View("LLogin");
+        */
+           }
+        }
+
 
         public IActionResult Privacy()
         {
