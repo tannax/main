@@ -6,6 +6,7 @@ using MySqlConnector;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
+using MySql.Data.MySqlClient;
 
 namespace Biblioteca.Models
 {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Biblioteca.Models;
 using Microsoft.AspNetCore.Http;
-
+using MySqlConnector;
 /* Testando GIT*/
 namespace Biblioteca.Controllers
 {
@@ -32,32 +32,21 @@ namespace Biblioteca.Controllers
         }
 
 
-        [HttpPost]
-        public IActionResult Login(string login, string senha)
-        {
-            if(login != "admin" || senha != "123")
-            {
-                ViewData["Erro"] = "Senha inválida";
-                return View();
-            }
-            else
-            {
-                HttpContext.Session.SetString("user", "admin");
-                return RedirectToAction("Index");
-            }
-        }
 
-  [HttpPost]
-        public IActionResult Login(Login u)
-        {
-            Login userFound = LoginBD.inserirLogin(u);
-           if(u != null) {
-            HttpContext.Session.SetInt32("id", userFound.id);
-        HttpContext.Session.SetString("login", userFound.login);
-        HttpContext.Session.SetString("senha", userFound.senha);
-            return View ();
-           }
-        }
+[HttpPost]
+public IActionResult Login(Login u)
+{
+    if (u == null)
+    {
+        return BadRequest("Login inválido");
+    }
+
+    Login userFound = LoginBD.inserirLogin(u);
+    HttpContext.Session.SetInt32("id", userFound.id);
+    HttpContext.Session.SetString("login", userFound.login);
+    HttpContext.Session.SetString("senha", userFound.senha);
+    return RedirectToAction("Index");
+}
 
 
         public IActionResult Privacy()
