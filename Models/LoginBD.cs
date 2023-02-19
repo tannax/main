@@ -11,7 +11,7 @@ namespace acII.Models
 {
     public class LoginBD
     {
-           private static string DB = "Database=destinocertodb; Data Source=localhost; User Id=root;";
+           private static string DB = "Database=bibliotecamunicipal; Data Source=localhost; User Id=root;";
          
        
           public static Login inserirLogin (Login u) {
@@ -32,14 +32,10 @@ namespace acII.Models
 if(Dados.Read()) {
 if (!Dados.IsDBNull(Dados.GetOrdinal("id")))
 userFound.id = Dados.GetInt32("id");
-if(!Dados.IsDBNull(Dados.GetOrdinal("nome")))
-userFound.nome = Dados.GetString("nome");
 if (!Dados.IsDBNull(Dados.GetOrdinal("login")))
 userFound.login = Dados.GetString("login");
 if(!Dados.IsDBNull(Dados.GetOrdinal("senha")))
 userFound.senha = Dados.GetString("senha");
-if(!Dados.IsDBNull(Dados.GetOrdinal("tipo")))
-userFound.tipo = Dados.GetInt32("tipo");
 }
 
           conexao.Close();
