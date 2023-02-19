@@ -48,7 +48,7 @@ namespace Biblioteca.Controllers
         }
 
   [HttpPost]
-        public IActionResult LLogin(Login u)
+        public IActionResult Login(Login u)
         {
             Login userFound = LoginBD.inserirLogin(u);
            if(u != null) {
@@ -56,15 +56,6 @@ namespace Biblioteca.Controllers
         HttpContext.Session.SetString("login", userFound.login);
         HttpContext.Session.SetString("senha", userFound.senha);
             return View ();
-
-            /* o que tinha do outro projeto:
-            return View("Cadastros");
-            }
-            else
-           {
-            ViewBag.Nota = "Falha no login!";
-        return View("LLogin");
-        */
            }
         }
 
