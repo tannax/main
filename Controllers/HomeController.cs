@@ -45,7 +45,8 @@ public IActionResult Login(Login u)
     HttpContext.Session.SetInt32("id", userFound.id);
     HttpContext.Session.SetString("login", userFound.login);
     HttpContext.Session.SetString("senha", userFound.senha);
-    return RedirectToAction("Index");
+     HttpContext.Session.SetString("user", "admin");
+                return RedirectToAction("Index");
 }
 
 
