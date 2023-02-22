@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Biblioteca.Models;
 using Microsoft.AspNetCore.Http;
-using MySqlConnector;
-/* Testando GIT*/
+
 namespace Biblioteca.Controllers
 {
     public class HomeController : Controller
@@ -31,24 +30,20 @@ namespace Biblioteca.Controllers
             return View();
         }
 
-
-
-[HttpPost]
-public IActionResult Login(Login u)
-{
-    if (u == null)
-    {
-        return BadRequest("Login inválido");
-    }
-
-    Login userFound = LoginBD.inserirLogin(u);
-    HttpContext.Session.SetInt32("id", userFound.id);
-    HttpContext.Session.SetString("login", userFound.login);
-    HttpContext.Session.SetString("senha", userFound.senha);
-     HttpContext.Session.SetString("user", "admin");
+        [HttpPost]
+        public IActionResult Login(string login, string senha)
+        {
+            if(login != "admin" || senha != "123")
+            {
+                ViewData["Erro"] = "Senha inválida";
+                return View();
+            }
+            else
+            {
+                HttpContext.Session.SetString("user", "admin");
                 return RedirectToAction("Index");
-}
-
+            }
+        }
 
         public IActionResult Privacy()
         {
