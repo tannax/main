@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Biblioteca.Models
 {
-public static class Criptografia
+public static class Criptografo
 {
 public static string TextoCriptografado(string textoClaro)
 {
