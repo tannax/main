@@ -33,10 +33,10 @@ public void editarUsuario (Usuario userEditado)
 using (BibliotecaContext bc= new BibliotecaContext())
 {
 Usuario u = bc.usuarios. Find (userEditado.Id);
-u.login = userEditado.login;
+u.Login = userEditado.Login;
 u.Nome = userEditado.Nome;
 u.senha = userEditado.senha;
-u.tipo= userEditado.tipo;
+u.tipo = userEditado.tipo;
 bc.SaveChanges();
 }
 }

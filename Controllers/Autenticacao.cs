@@ -22,7 +22,7 @@ using (BibliotecaContext bc = new BibliotecaContext())
 {
 verificaSeUsuarioAdminExiste(bc);
 senha = Criptografo.TextoCriptografado(senha);
-IQueryable<Usuario> UsuarioEncontrado = bc.usuarios.Where (u => u.login==login && u.senha==senha);
+IQueryable<Usuario> UsuarioEncontrado = bc.usuarios.Where (u => u.Login==login && u.senha==senha);
 List<Usuario>ListaUsuarioEncontrado = UsuarioEncontrado.ToList();
 if(ListaUsuarioEncontrado.Count==0)
 {
@@ -30,7 +30,7 @@ return false;
 }
 else
 {
-controller.HttpContext.Session. SetString("login",ListaUsuarioEncontrado [0].login);
+controller.HttpContext.Session. SetString("login",ListaUsuarioEncontrado [0].Login);
 controller.HttpContext.Session. SetString("Nome",ListaUsuarioEncontrado [0]. Nome);
 controller.HttpContext.Session. SetInt32("tipo",ListaUsuarioEncontrado [0].tipo);
 return true;
@@ -39,12 +39,12 @@ return true;
 }
 public static void verificaSeUsuarioAdminExiste(BibliotecaContext bc)
 { 
-IQueryable<Usuario> userEncontrado = bc.usuarios.Where(u => u.login=="admin");
+IQueryable<Usuario> userEncontrado = bc.usuarios.Where(u => u.Login=="admin");
 //Se não existir será criado o usuario admin padrão
 if(userEncontrado.ToList().Count==0)
 {
 Usuario admin = new Usuario();
-admin.login = "admin";
+admin.Login = "admin";
 admin.senha = Criptografo. TextoCriptografado ("123");
 admin.tipo = Usuario.ADMIN;
 admin. Nome = "Administrador";

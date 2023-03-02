@@ -20536,6 +20536,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Home/NovoUsuario.cshtml",
+      "TargetPath": "Views\\Home\\NovoUsuario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Livro/Listagem.cshtml",
       "TargetPath": "Views\\Livro\\Listagem.cshtml",
       "FileKind": "mvc"
@@ -20558,6 +20563,11 @@
     {
       "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Home/usuariosEdit.cshtml",
+      "TargetPath": "Views\\Home\\usuariosEdit.cshtml",
       "FileKind": "mvc"
     },
     {

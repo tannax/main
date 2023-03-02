@@ -2,3 +2,8 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+services.AddAuthorization(options => {
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+});
+var claims = User.Claims;

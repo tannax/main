@@ -1,0 +1,44 @@
+@model List<Usuario>
+
+@{
+    ViewData["Title"] = "Lista de Usuários";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="NovoUsuario">Novo Usuário</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Login</th>
+            <th>Tipo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null) {
+            @foreach (var usuario in Model) {
+                <tr>
+                    <td>@usuario.Id</td>
+                    <td>@usuario.Nome</td>
+                    <td>@usuario.Login</td>
+                    <td>@usuario.tipo</td>
+                    <td>
+                        <a asp-action="EditarUsuario" asp-route-id="@usuario.Id">Editar</a> |
+                        <a asp-action="ExcluirUsuario" asp-route-id="@usuario.Id">Excluir</a>
+                    </td>
+                </tr>
+            }
+        }
+        else {
+            <tr>
+                <td colspan="5">Não há usuários cadastrados.</td>
+            </tr>
+        }
+    </tbody>
+</table>
