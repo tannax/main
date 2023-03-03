@@ -82,7 +82,7 @@ namespace Biblioteca.Controllers
             HttpContext.Session.SetString("senha", userFound.senha);
 
             // Set user role or claim
-            if (userFound.tipo == 1)
+            if (userFound.tipo == 0)
             {
                 HttpContext.Session.SetString("user", "admin");
             }
