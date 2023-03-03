@@ -14,5 +14,6 @@ namespace Biblioteca.Models
         public int id {get;set;}
         public string senha {get;set;}
         public string login {get;set;}   
+        public int tipo {get;set;}
     }
 }

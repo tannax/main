@@ -2,6 +2,9 @@ using Biblioteca.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Biblioteca.Controllers
 {
@@ -34,7 +37,7 @@ public IActionResult RegistrarUsuarios()
 {
 Autenticacao.CheckLogin(this);
 Autenticacao.verificaSeUsuarioEAdmin(this);
-return View();
+return View(new NovoUsuarioWithoutParams());
 }
 
 
@@ -73,6 +76,21 @@ return View("ListaDeUsuarios", new UsuarioService (). Listar());
 }
 }
 
+
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext<BibliotecaContext>(options =>
+        options.UseSqlServer(Configuration.GetConnectionString("BibliotecaContext")));
+    // Other service registrations
+}
+
+
+public void incluirUsuario(Usuario usuario)
+{
+    _context.Add(usuario);
+    _context.SaveChanges();
+}
 
 public IActionResult cadastroRealizado() 
 {

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-
+using Biblioteca.Models;
 
 namespace Biblioteca.Models
 {
     public class NovoUsuarioWithoutParams
     {
-        private const string V = "AdminOnly";
-
+        internal string login = "";
+        internal string senha = "";
+        internal int tipo = 0;
     }
 }

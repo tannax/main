@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
@@ -22,6 +23,46 @@ namespace Biblioteca.Controllers
             return View();
         }
 
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult UsuariosEdit()
+        {
+            return View();
+        }
+
+        public IActionResult NovoUsuario() => View();
+
+        [HttpPost]
+        [Authorize(Policy = "AdminOnly")]
+        public IActionResult NovoUsuario(NovoUsuarioWithoutParams novoUsuario)
+        {
+            // TODO: Add code to create a new user with the provided parameters
+            return RedirectToAction("Index");
+        }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            // Add session middleware
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            // Configure authorization policies
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly", policy => policy.RequireClaim("user", "admin"));
+            });
+
+            // Other service configurations...
+        }
+
         public IActionResult Login()
         {
             return View();
@@ -39,37 +80,21 @@ namespace Biblioteca.Controllers
             HttpContext.Session.SetInt32("id", userFound.id);
             HttpContext.Session.SetString("login", userFound.login);
             HttpContext.Session.SetString("senha", userFound.senha);
-            HttpContext.Session.SetString("user", "admin");
-            return RedirectToAction("Index");
-        }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult UsuariosEdit()
-        {
-            return View();
-        }
-
-        [Authorize(Policy = "AdminOnly")]
-        public IActionResult NovoUsuario()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [Authorize(Policy = "AdminOnly")]
-        public IActionResult NovoUsuario(NovoUsuarioWithoutParams novoUsuario)
-        {
-            if (ModelState.IsValid)
+            // Set user role or claim
+            if (userFound.tipo == 1)
             {
-                // save the new user to the database
-                return RedirectToAction("NovoUsuario");
+                HttpContext.Session.SetString("user", "admin");
+            }
+            else
+            {
+                HttpContext.Session.SetString("user", "normal");
             }
 
-            return View("NovoUsuario");
+            return RedirectToAction("Index");
+
         }
+
+
     }
 }

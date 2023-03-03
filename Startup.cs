@@ -39,8 +39,10 @@ namespace Biblioteca
             {
                 options.AddPolicy("AdminOnly", policy =>
                 {
+                    policy.RequireRole("admin");
                     policy.RequireAuthenticatedUser();
                     policy.RequireClaim("user", "admin");
+                    options.AddPolicy("AdminOnly", policy => policy.RequireRole("admin"));
                 });
             });
 
