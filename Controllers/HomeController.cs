@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Biblioteca.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Biblioteca.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Authorization;
+using System;
 
 namespace Biblioteca.Controllers
 {
     public class HomeController : Controller
     {
-        private const string V = "AdminOnly";
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
-
 
         public IActionResult Index()
         {
@@ -54,25 +48,28 @@ namespace Biblioteca.Controllers
             return View();
         }
 
-
-        public IActionResult usuariosEdit()
+        public IActionResult UsuariosEdit()
         {
             return View();
         }
-
 
         [Authorize(Policy = "AdminOnly")]
         public IActionResult NovoUsuario()
         {
-            return RedirectToAction("NovoUsuarioWithoutParams");
-        }
-
-        public IActionResult NovoUsuarioWithoutParams()
-        {
-            Autenticacao.CheckLogin(this);
-            Autenticacao.verificaSeUsuarioEAdmin(this);
             return View();
         }
-        
+
+        [HttpPost]
+        [Authorize(Policy = "AdminOnly")]
+        public IActionResult NovoUsuario(NovoUsuarioWithoutParams novoUsuario)
+        {
+            if (ModelState.IsValid)
+            {
+                // save the new user to the database
+                return RedirectToAction("NovoUsuario");
+            }
+
+            return View("NovoUsuario");
+        }
     }
 }
