@@ -3,15 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using MySql.Data.MySqlClient;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Biblioteca.Controllers
 {
 public class UsuariosController : Controller
 {
+        private object _context;
 
-public IActionResult ListaDeUsuarios ()
+        public IActionResult ListaDeUsuarios ()
 {
 Autenticacao.CheckLogin(this);
 Autenticacao.verificaSeUsuarioEAdmin(this);
@@ -47,9 +47,15 @@ public IActionResult RegistrarUsuarios(Usuario novoUser)
 Autenticacao.CheckLogin(this);
 Autenticacao.verificaSeUsuarioEAdmin(this);
 novoUser.senha = Criptografo.TextoCriptografado (novoUser.senha);
+
+//corrigir
+        _context.Usuarios.Add(novoUser);
+        _context.SaveChanges();
+
 UsuarioService us = new UsuarioService();
 us.incluirUsuario (novoUser);
 return RedirectToAction("cadastroRealizado");
+
 }
 
 
@@ -78,19 +84,7 @@ return View("ListaDeUsuarios", new UsuarioService (). Listar());
 
 
 
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddDbContext<BibliotecaContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("BibliotecaContext")));
-    // Other service registrations
-}
 
-
-public void incluirUsuario(Usuario usuario)
-{
-    _context.Add(usuario);
-    _context.SaveChanges();
-}
 
 public IActionResult cadastroRealizado() 
 {
