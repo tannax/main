@@ -26,9 +26,19 @@
                             <div class="dropdown-menu" aria-labelledby="menuLivros">
                                 <a class="dropdown-item" href="/Emprestimo/Listagem">Listagem</a>
                                 <a class="dropdown-item" href="/Emprestimo/Cadastro">Cadastro</a>
-                                <a class="dropdown-item" href="/Home/usuariosEdit">Editar Usuario</a>
                             </div>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#">Usuario</a>
+                            <div class="dropdown-menu" aria-labelledby="menuUsuario">
+                                <a class="dropdown-item" href="/Usuarios/NovoUsuario">Cadastrar Usuario</a>
+                                <a class="dropdown-item" href="/Usuarios/ListaDeUsuarios">Editar Usuario</a>
+                            </div>
+                        </li>
+                       
+                       <form asp-controller="" asp-action="Logout" method="post">
+                       <button type="submit">Logout</button>
+                    </form>
                     </ul>
                 </div>
             </div>

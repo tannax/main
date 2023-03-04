@@ -51,5 +51,67 @@
 /home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.dll
 /home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.pdb
 /home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.genruntimeconfig.cache
-/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Home/usuariosEdit.cshtml.g.cs
-/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Home/novousuario.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/appsettings.Development.json
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/appsettings.json
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.StaticWebAssets.xml
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.exe
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.deps.json
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.runtimeconfig.json
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.runtimeconfig.dev.json
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.pdb
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.Views.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Biblioteca.Views.pdb
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/MySqlConnector.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.csproj.AssemblyReference.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.AssemblyInfoInputs.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.AssemblyInfo.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.csproj.CoreCompileInputs.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.MvcApplicationPartsAssemblyInfo.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.RazorAssemblyInfo.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.RazorAssemblyInfo.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/staticwebassets/Biblioteca.StaticWebAssets.Manifest.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/staticwebassets/Biblioteca.StaticWebAssets.Pack.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/staticwebassets/msbuild.Biblioteca.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/staticwebassets/msbuild.build.Biblioteca.props
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/staticwebassets/msbuild.buildMultiTargeting.Biblioteca.props
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/staticwebassets/msbuild.buildTransitive.Biblioteca.props
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.TagHelpers.input.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.TagHelpers.output.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.RazorCoreGenerate.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Emprestimo/Cadastro.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Emprestimo/Edicao.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Emprestimo/Listagem.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Home/Login.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Livro/Cadastro.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Livro/Edicao.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Livro/Listagem.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Livro/_FormCadastro.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.RazorTargetAssemblyInfo.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.RazorTargetAssemblyInfo.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.Views.pdb
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.csproj.CopyComplete
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.dll
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.pdb
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Biblioteca.genruntimeconfig.cache
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Usuarios/ListaDeUsuarios.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Usuarios/NovoUsuario.cshtml.g.cs
+D:/Nova pasta (2)/Técnico em Informática para Internet EAD/IPI/Auxilios/Eduardo UC07/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Usuarios/cadastroRealizado.cshtml.g.cs
+/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Usuarios/cadastroRealizado.cshtml.g.cs
+/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Usuarios/ListaDeUsuarios.cshtml.g.cs
+/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/obj/Debug/netcoreapp3.1/Razor/Views/Usuarios/NovoUsuario.cshtml.g.cs

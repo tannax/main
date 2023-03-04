@@ -20536,13 +20536,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Home/NovoUsuario.cshtml",
-      "TargetPath": "Views\\Home\\NovoUsuario.cshtml",
+      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Livro/Listagem.cshtml",
+      "TargetPath": "Views\\Livro\\Listagem.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Livro/Listagem.cshtml",
-      "TargetPath": "Views\\Livro\\Listagem.cshtml",
+      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Usuarios/cadastroRealizado.cshtml",
+      "TargetPath": "Views\\Usuarios\\cadastroRealizado.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Usuarios/NovoUsuario.cshtml",
+      "TargetPath": "Views\\Usuarios\\NovoUsuario.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20556,6 +20561,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Usuarios/ListaDeUsuarios.cshtml",
+      "TargetPath": "Views\\Usuarios\\ListaDeUsuarios.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Livro/Edicao.cshtml",
       "TargetPath": "Views\\Livro\\Edicao.cshtml",
       "FileKind": "mvc"
@@ -20563,11 +20573,6 @@
     {
       "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/krux/Documents/SENAC PDFs/ModuloII/UC07/New Folder/BibliotecaNetcore3.1/Views/Home/usuariosEdit.cshtml",
-      "TargetPath": "Views\\Home\\usuariosEdit.cshtml",
       "FileKind": "mvc"
     },
     {

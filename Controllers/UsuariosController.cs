@@ -11,17 +11,29 @@ namespace Biblioteca.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly MyDbContext _context;
 
-        public UsuariosController(MyDbContext context)
+
+        public IActionResult NovoUsuario()
         {
-            _context = context;
+            return View();
         }
 
+        [HttpPost]
+        public IActionResult NovoUsuario(Usuario novoUser)
+        {
+            UsuarioService service = new UsuarioService();
+
+            novoUser.senha = Criptografo.TextoCriptografado(novoUser.senha);
+
+            UsuarioService us = new UsuarioService();
+            us.incluirUsuario(novoUser);
+
+            return RedirectToAction("cadastroRealizado");
+        }
         public IActionResult ListaDeUsuarios()
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificaSeUsuarioEAdmin(this);
+            Autenticacao.verificaSeUsuarioAdmin(this);
             return View(new UsuarioService().Listar());
         }
 
@@ -42,7 +54,7 @@ namespace Biblioteca.Controllers
         public IActionResult RegistrarUsuarios()
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificaSeUsuarioEAdmin(this);
+            Autenticacao.verificaSeUsuarioAdmin(this);
             return View(new NovoUsuarioWithoutParams());
         }
 
@@ -50,15 +62,15 @@ namespace Biblioteca.Controllers
         public IActionResult RegistrarUsuarios(Usuario novoUser)
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificaSeUsuarioEAdmin(this);
+            Autenticacao.verificaSeUsuarioAdmin(this);
             novoUser.senha = Criptografo.TextoCriptografado(novoUser.senha);
 
-            _context.Usuarios.Add(novoUser);
-            _context.SaveChanges();
+            using (BibliotecaContext bc = new BibliotecaContext()) {
 
             UsuarioService us = new UsuarioService();
             us.incluirUsuario(novoUser);
             return RedirectToAction("cadastroRealizado");
+        }
         }
 
 
@@ -88,7 +100,7 @@ namespace Biblioteca.Controllers
         public IActionResult cadastroRealizado()
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificaSeUsuarioEAdmin(this);
+            Autenticacao.verificaSeUsuarioAdmin(this);
             return View();
         }
 
@@ -104,11 +116,6 @@ namespace Biblioteca.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is UsuariosController controller
-                && EqualityComparer<DbContext>.Default.Equals(this._context, controller._context);
-        }
 
         public override int GetHashCode()
         {
@@ -128,7 +135,7 @@ namespace Biblioteca.Controllers
             hash.Add(TempData);
             hash.Add(ViewBag);
             hash.Add(ViewData);
-            hash.Add(_context);
+            
             return hash.ToHashCode();
         }
     }

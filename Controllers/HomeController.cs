@@ -28,24 +28,29 @@ namespace Biblioteca.Controllers
             return View();
         }
 
-        public IActionResult UsuariosEdit()
+        public IActionResult Login()
         {
             return View();
         }
 
-        public IActionResult NovoUsuario() => View();
-
         [HttpPost]
-        [Authorize(Policy = "AdminOnly")]
-        public IActionResult NovoUsuario(NovoUsuarioWithoutParams novoUsuario)
+        public IActionResult Login(string login, string senha)
         {
-            // TODO: Add code to create a new user with the provided parameters
-            return RedirectToAction("Index");
+            if (Autenticacao.verificaLoginSenha(login, senha, this))
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewData["Erro"] = "Senha Inválida";
+                return View();
+            }
         }
+
+
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add session middleware
             services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {
@@ -54,45 +59,17 @@ namespace Biblioteca.Controllers
                 options.Cookie.IsEssential = true;
             });
 
-            // Configure authorization policies
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdminOnly", policy => policy.RequireClaim("user", "admin"));
             });
 
-            // Other service configurations...
         }
 
-        public IActionResult Login()
+        public IActionResult Logout()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Login(Login u)
-        {
-            if (u == null)
-            {
-                return BadRequest("Login inválido");
-            }
-
-            Login userFound = LoginBD.inserirLogin(u);
-            HttpContext.Session.SetInt32("id", userFound.id);
-            HttpContext.Session.SetString("login", userFound.login);
-            HttpContext.Session.SetString("senha", userFound.senha);
-
-            // Set user role or claim
-            if (userFound.tipo == 0)
-            {
-                HttpContext.Session.SetString("user", "admin");
-            }
-            else
-            {
-                HttpContext.Session.SetString("user", "normal");
-            }
-
-            return RedirectToAction("Index");
-
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
 
 

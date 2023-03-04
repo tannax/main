@@ -1,0 +1,32 @@
+@model Usuario
+
+<h1 class="text-center">Cadastro de Usuários</h1>
+<form method="POST" asp-action="NovoUsuario">
+    <input type="hidden" asp-for="Id">
+    <p>
+        <label asp-for="Nome">Nome:</label>
+        <input asp-for="Nome">
+    </p>
+    <p>
+        <label asp-for="login">Login:</label>
+        <input asp-for="login" required>
+    </p>
+    <p>
+        <label asp-for="senha"> Senha:</label>
+        <input type="password" asp-for="senha" required>
+    </p>
+
+    <p>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </p>
+        <select name="Tipo" id="userTipo">
+        <option value="@Usuario.PADRAO">Padrão</option>
+    </select>
+    <p>
+
+    </p>
+</form>
+
+<p>
+    @ViewBag.Mensagem
+</p>

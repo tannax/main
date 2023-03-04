@@ -1,8 +1,22 @@
 @model ICollection<Emprestimo>
 @{
-    ViewData["Title"] = "Listagem de Empréstimos";
+ViewData["Title"] = "Listagem de Empréstimos";
+
+int FiltroPorPag = ViewData.ContainsKey("emprestimosPorPagina") && int.TryParse(ViewData["emprestimosPorPagina"].ToString(), out int emprestimosPorPagina) ? emprestimosPorPagina : 10;
+
+
+int PaginaAtual = 1;
+if (ViewData.ContainsKey("PaginaAtual") && int.TryParse(ViewData["PaginaAtual"].ToString(), out int paginaAtual))
+{
+    PaginaAtual = paginaAtual;
+}
+int NumEmprestimosPorPag = (Model.Count < FiltroPorPag ? Model.Count : FiltroPorPag);
+int NumTotaldePag = Model.Count / NumEmprestimosPorPag + (Model.Count % NumEmprestimosPorPag == 0 ? 0 : 1);
+String Classe = "";
 }
 
+
+    <script src="~/js/listagem.js"></script>
 <div class="row">
     <div class="col-md-12">
     <form class="form-inline" method="POST">
@@ -16,12 +30,24 @@
             <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
         </div>
         <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
+
+        <div>
+            <select name="itensPorPagina" id="itensPorPagina" class="form-control">
+                <option value="10">10 Livros</option>
+                <option value="20">20 Livros</option>
+                <option value="50">50 Livros</option>
+                <option value="100">100 Livros</option>
+            </select>
+        </div>
+
     </form>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-12">
+        @if (Model.Count !=0)
+        {
         <table > 
             <thead>
                 <tr><th>Id</th>
@@ -34,20 +60,45 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(Emprestimo e in Model)
-                {
-                <tr>
-                    <td>@e.Id</td>
-                    <td>@e.NomeUsuario</td>
-                    <td>@e.DataEmprestimo.ToString("dd/MM/yyyy")</td>
-                    <td>@e.DataDevolucao.ToString("dd/MM/yyyy")</td>
-                    <td>@e.Livro.Titulo</td>
-                    <td>@e.Livro.Autor</td>
-                    <td><a href="/Emprestimo/Edicao/@e.Id">Editar</a></td>
-                </tr>
-                }
+                
+@foreach(var e in Model.Take(NumEmprestimosPorPag))
+{
+@if ((System.DateTime.Compare(System.DateTime.Now, e.DataDevolucao)>0))
+{
+  Classe = "text-danger";
+}
+else
+{
+Classe = "";
+}
+
+<tr class="@Classe">
+   <td>@e.Id</td>
+<td>@e.NomeUsuario</td>
+<td>@e.DataEmprestimo.ToString("dd/MM/yyyy")</td>
+<td>@e.DataDevolucao.ToString("dd/MM/yyyy")</td>
+<td>@e.Livro.Titulo</td>
+<td>@e.Livro.Autor</td>
+<td><a href="/Emprestimo/Edicao/@e.Id">Editar</a></td>
+</tr>
+}
             </tbody>
         </table>
+        }
+else
+{
+    <p>Nenhum registro encontrado.</p>
+}
+
+
     </div>
+<div id="SeletorPaginas" class="pagination" style="margin: 4px;">
+    <span>Página:  </span>
+@for (int i = 1; i <= NumTotaldePag; i++)
+{
+    <span style="margin-left: 4px;" class="page-item"> <a class="page-link" href="/Emprestimo/Listagem?PaginaAtual=@i"></a></span>
+}
+
+</div>
 </div>
 
